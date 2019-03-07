@@ -1,0 +1,426 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors luozh@snail.com
+ * @date    2016-03-22 11:24:40
+ * @description 公用样式
+ */
+
+
+/* 基础样式 */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Microsoft YaHei";
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+a {
+   color: #005380;
+   text-decoration: none;
+}
+
+a:active,
+a:focus {
+    outline: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.form-control[disabled],
+fieldset[disabled] .form-control {
+    cursor: default !important;
+}
+
+h1, h2, h3, h4, strong {
+    color: #2c3e50;
+    font-weight: 600;
+    font-family: Arial, "Microsoft YaHei";
+}
+
+h1, h2 {
+    margin: 0.8em 0 0.8em;
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.pd30 {
+    padding: 30px;
+}
+
+.h100 {
+    height: 100% !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.clearfix:before, .clearfix:after {
+    content:"";
+    display:table;
+    *zoom:1;
+}
+
+.clearfix:after  {
+    clear:both;
+}
+
+.pointer {
+    color: #03A9F4;
+    cursor: pointer;
+}
+
+.text-danger {
+    color: #a94442;
+}
+
+.text-primary {
+    color: #337ab7;
+}
+
+.text-success {
+    color: #3c763d;
+}
+
+.btn-danger {
+    color: #fff !important;
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+}
+
+/* 全局样式 */
+#app {
+    height: 100%;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    background-color: #000;
+}
+
+.header {
+    height: 50px;
+    background: #09c;
+}
+
+.banner {
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: #09c;
+}
+
+.logo {
+    display: inline-block;
+    width: 115px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: #208cbd;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.account {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+}
+
+.account > span {
+    display: inline-block;
+    padding: 0 20px;
+    border-left: 1px solid #008fbf;
+}
+
+.account > span:hover {
+    background: #008fbf;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 185px;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    background-color: #333;
+    z-index: 102;
+    overflow-x: hidden;
+}
+
+.right-view {
+    width: auto;
+    position: absolute !important;
+    top: 0;
+    left: 185px;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+}
+
+.right-main {
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+}
+
+.main-top {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.main-box {
+    position: absolute;
+    bottom: 0;
+    top: 42px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    overflow: auto;
+
+    a {
+        color: #005380;
+    }
+}
+
+.timeline-box {
+    max-height: 80%;
+    overflow: auto;
+}
+
+.detail-box {
+    padding-top: 42px;
+}
+
+.detail-content {
+    height: 100%;
+    padding: 50px 10px 10px;
+    overflow: auto;
+}
+
+.detail-left {
+    background: #f7f7f7;
+}
+
+.detail-right {
+    background: #fdfdfd;
+}
+
+.detail-operate {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    line-height: 42px;
+    z-index: 999;
+}
+
+
+.message-badge {
+    font-size: 12px;
+    color: #fff;
+    background: #ff9900;
+    border-radius: 5px;
+    padding: 1px 5px;
+    margin-left: 10px;
+    display: inline-block;
+    margin-top: 15px;
+    line-height: 16px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.msg-list {
+    min-width: 340px;
+}
+
+.msg-list > li > a:hover {
+    background: #f9f9f9;
+}
+
+.msg-list > li > a {
+    display: block;
+    height: 100%;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    border-bottom: 1px solid #eaedf1;
+}
+
+.notice-link,
+.notice-time {
+    display: block;
+}
+
+.notice-link {
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #06c;
+}
+
+.form-operate {
+    text-align: center;
+}
+
+#body {
+
+    /* ant-design样式覆盖 */
+    .ant-menu-item {
+        padding: 0 !important;
+    }
+
+    .ant-menu-item a.active {
+        background-color: #2db7f5;
+        color: #fff !important;
+    }
+
+    .ant-menu-item > a {
+        width: 100%;
+        display: inline-block;
+        padding-left: 48px;
+    }
+
+    .ant-menu-dark.ant-menu-inline .ant-menu-item-selected {
+        background-color: transparent;
+    }
+
+    .ant-menu-dark .ant-menu-item-selected > a {
+        color: #999;
+    }
+
+    .ant-input[disabled],
+    .ant-select-disabled {
+        background-color: #fff;
+        color: #4e4d4d;
+    }
+
+    .ant-radio-disabled .ant-radio-inner,
+    .ant-checkbox-disabled .ant-checkbox-inner,
+    .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner {
+        background-color: #fff; 
+    }
+
+    .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner:after {
+        border-color: #4e4d4d;
+    }
+
+    .ant-radio-disabled .ant-radio-inner:after {
+        background-color: #4e4d4d;
+    }
+
+    .ant-checkbox-disabled + span {
+        color: #4e4d4d;
+    }
+
+    .ant-select-disabled .ant-select-selection {
+        background: #fff;
+        cursor: not-allowed;
+    }
+
+    .ant-input-number-disabled .ant-input-number-input {
+        background-color: #fff;
+    }
+
+    .ant-input-number-input[disabled] {
+        color: #000;
+    }
+
+    .ant-btn.btn-danger:hover, .ant-btn.btn-danger:focus {
+        color: #fff;
+        background-color: #ea6d69;
+        border-color: #d43f3a;
+    }
+
+    .ant-timeline-item-head-custom:hover {
+        cursor: pointer;
+    }
+
+    .ant-modal-footer {
+        text-align: center;
+    }
+
+    .ant-badge-count {
+        right: -34px;
+    }
+
+    .ant-modal-body {
+        max-height: 600px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
