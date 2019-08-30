@@ -1,5 +1,5 @@
 import react from "react";
-import { BrowserRouter as Router,Route,withRouter,Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, withRouter, Switch} from 'react-router-dom'
 
 // export const routes = {
 //     path:'/',
