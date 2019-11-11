@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { BrowserRouter, Route, Redirect,Switch,Link} from 'react-router-dom'
+import { BrowserRouter, Route, Redirect, Switch, Link} from 'react-router-dom'
 import { loginAction } from '../action/loginAction'
 
-import Main from "./Main"
+import Main from "./Main";
+
 class Login extends React.Component {
 
-	handleLogin = () => {
+	handleLogin = (acType) => {
+		console.log(acType);
 		dispatch({
-			type: 1
+			type: acType
 		})
 		
 	};
@@ -25,10 +27,10 @@ class Login extends React.Component {
 	}
 }
 const mapStateToProps = (state) =>{
-	return {users:state.loginReducer}
+	return {users: state.loginReducer}
 }
 
 //Connect负责从外部获取组件需要的参数
-Login = connect(mapStateToProps,{loginAction})(Login);
+Login = connect(mapStateToProps, {loginAction})(Login);
 
 export default Login;

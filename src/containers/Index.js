@@ -34,12 +34,12 @@ class Index extends React.Component {
     }
 } 
 
-const mapStateToProps = (state) =>{
-	return {users:state.loginReducer}
+const mapStateToProps = (state) => {
+	return {users: state.loginReducer}
 }
 
-//Connect负责从外部获取组件需要的参数
-Index = connect(mapStateToProps,{loginAction})(Index);
+// Connect负责从外部获取组件需要的参数
+Index = connect(mapStateToProps, {loginAction})(Index);
 
 
 export default Index

@@ -16,14 +16,14 @@ import Main from "./containers/Main"
 
 ReactDom.render(
     (<Provider store={store}>
-        <BrowserRouter>
+        <HashRouter>
             <div className="container">
                 <Switch>
                     <Route exact path="/" component={Login}/>
                     <Route path="/main" component={Main}/>
                 </Switch>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     </Provider>),
     document.getElementById('app')
 )

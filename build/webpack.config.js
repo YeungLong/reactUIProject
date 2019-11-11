@@ -12,7 +12,7 @@ module.exports = {
 	  vonder: ["react", "react-dom", "react-router"]
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+      path: path.resolve(__dirname, '../dist'),
 	  filename: '[name].js',
 	  chunkFilename: "[name].[chunkhash].chunk.js"
   },

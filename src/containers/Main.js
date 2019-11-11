@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Redirect, Switch, Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import { loginAction } from '../action/loginAction'
 
-import login from "./Login"
+import login from "./Login";
+import AntdTable from "./AntdTable";
 
 function ClassOne(){
 	return <p>初三(1)班：有90个人</p>
@@ -41,6 +42,9 @@ class Main extends React.Component {
 					<Route path={`${match.url}/`} exact component={ClassOne} ></Route>
 					<Route path={`${match.url}/classTwo`} component={ClassTwo}></Route>
 					<Route path={`${match.url}/classThree`}  component={ClassThree}></Route>
+					<div id="antdTable">
+						<AntdTable/>
+					</div>
 				</div>
 			)
 		return this.props.users.isAuth ? app : rediectToLogin

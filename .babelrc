@@ -1,7 +1,12 @@
 {
     "presets": ["@babel/preset-env", "@babel/preset-react", "mobx"],
     "plugins": [
-        ["antd",  { "style": "css" }],
+        // ["antd",  { "style": "css" }],
+        ["import", {
+            "libraryName": "antd",
+            "libraryDirectory": "es",
+            "style": "css" // `style: true` 会加载 less 文件
+        }],
         "@babel/plugin-proposal-object-rest-spread",
         "@babel/plugin-transform-runtime"
     ]
